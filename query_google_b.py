@@ -48,7 +48,8 @@ list_ids = os.listdir(ids_path)
 a = list_ids[234*0:234*1]
 b = list_ids[234*1:234*2-1]
 
-q="vaksin vaccine booster boster Sinovac Astrazeneca Moderna Sinopharm Pfizer BioNTech Novavax Sputnik Janssen Convidencia Zifivax"
+# q="vaksin vaccine booster boster Sinovac Astrazeneca Moderna Sinopharm Pfizer BioNTech Novavax Sputnik Janssen Convidencia Zifivax"
+q="vaksin"
 for ids in b:
     print(ids)
     try:

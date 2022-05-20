@@ -1,0 +1,3 @@
+[submodule "covid19-indonesian-tweet"]
+	path = covid19-indonesian-tweet
+	url = https://github.com/douglasraevan/covid19-indonesian-tweet.git

@@ -28,7 +28,7 @@ def query_exist_tweet(q, list_of_id):
     q = q.lower()
     q = q.split(' ')
     df = pd.DataFrame(columns=['id', 'tweet'])
-    for id in tqdm(list_of_id):
+    for id in list_of_id:
         # if count == count_query: continue
         try:
             tweet = api.get_status(id=int(id)).text.lower()
@@ -43,23 +43,3 @@ def query_exist_tweet(q, list_of_id):
             df = df.append(df2, ignore_index=True)
             # count += 1
     return df
-
-list_ids = os.listdir(ids_path)
-a = list_ids[234*0:234*1]
-b = list_ids[234*1:234*2-1]
-
-# q="vaksin vaccine booster boster Sinovac Astrazeneca Moderna Sinopharm Pfizer BioNTech Novavax Sputnik Janssen Convidencia Zifivax"
-q="vaksin"
-for ids in a:
-    print(ids)
-    try:
-        df_ids = pd.read_csv(ids_path+ids, header=None)
-    except:
-        print("NO ID")
-        continue
-    try:
-        tweet = query_exist_tweet(q=q, list_of_id=df_ids.values)
-    except:
-        tweet = query_exist_tweet(q=q, list_of_id=df_ids.values)
-    print("found {}".format(tweet.shape[0]))
-    tweet.to_csv(main_path+'query_tweet/'+ids, index=False)

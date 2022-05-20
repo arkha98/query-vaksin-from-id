@@ -1,0 +1,11 @@
+ipykernel
+plotly
+numpy
+pandas
+scikit-learn
+tqdm
+matplotlib
+tweepy
+twint
+selenium
+requests

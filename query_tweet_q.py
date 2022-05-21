@@ -38,7 +38,7 @@ t = list_ids[23*19:23*20-1]
 
 # q="vaksin vaccine booster boster Sinovac Astrazeneca Moderna Sinopharm Pfizer BioNTech Novavax Sputnik Janssen Convidencia Zifivax"
 query="vaksin"
-for ids in query:
+for ids in q:
     try:
         df_ids = pd.read_csv(ids_path+ids, header=None)
     except:

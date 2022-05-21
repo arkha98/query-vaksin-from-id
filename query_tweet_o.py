@@ -44,7 +44,7 @@ for ids in o:
     except:
         continue
     try:
-        tweet = qt.query_exist_tweet(q=query, list_of_id=df_ids.values)
+        tweet = qt.query_exist_tweet(q=query, list_of_id=df_ids.values[:10000])
     except:
         tweet = qt.query_exist_tweet(q=query, list_of_id=df_ids.values)
     tweet.to_csv(main_path+'query_tweet/'+ids, index=False)

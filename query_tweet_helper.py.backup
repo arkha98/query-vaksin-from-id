@@ -28,7 +28,7 @@ def query_exist_tweet(q, list_of_id):
     q = q.lower()
     q = q.split(' ')
     df = pd.DataFrame(columns=['id', 'tweet'])
-    for id in tqdm(list_of_id):
+    for id in list_of_id:
         # if count == count_query: continue
         try:
             tweet = api.get_status(id=int(id)).text.lower()

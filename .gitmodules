@@ -1,3 +1,6 @@
 [submodule "covid19-indonesian-tweet"]
 	path = covid19-indonesian-tweet
 	url = https://github.com/douglasraevan/covid19-indonesian-tweet.git
+[submodule "hydrator"]
+	path = hydrator
+	url = https://github.com/DocNow/hydrator.git

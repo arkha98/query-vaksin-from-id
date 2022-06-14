@@ -28,7 +28,7 @@ def query_username(list_of_id):
     df = pd.DataFrame(columns=['tweet_id', 'username'])
     for id in tqdm(list_of_id):
         try:
-            user = api.lookup_users()
+            user = api.
         except:
             continue
         df2 = pd.DataFrame({"tweet_id":[id], "username":[user]})
